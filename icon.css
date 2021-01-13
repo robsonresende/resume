@@ -1,0 +1,80 @@
+.menuicon {
+	width: 88px;
+	height: 88px;
+	float: right;
+}
+
+label {
+	max-width:44px;
+	max-height: 40px;
+	border-radius: 3px;
+}
+
+.menuicon label {
+	width: 100%;
+	height: 100%;
+	background-color: #006699;
+	position: absolute;
+	transition: all 0.3s linear;
+}
+
+#check {
+	position: absolute;
+	z-index: 1;
+	display: none;
+}
+
+.spcheck {
+	width: 35px;
+	height: 4px;
+	top: 18px;
+	right: 5px;
+	position: absolute;
+	background-color: #ffffff;
+	transition: all 0.3s linear;
+	z-index: 1;
+}
+
+.spcheck:before {
+	content: '';
+	width: 35px;
+	height: 4px;
+	bottom: -12px;
+	right: 0px;
+	position: absolute;
+	background-color: #ffffff;
+	transition: all 0.3s linear;
+	z-index: 1;
+}
+
+.spcheck:after {
+	content: '';
+	width: 35px;
+	height: 4px;
+	top: -12px;
+	right: 0px;
+	position: absolute;
+	background-color: #ffffff;
+	transition: all 0.3s linear;
+	z-index: 1;
+}
+
+#check:checked ~ span {
+	background-color: transparent;
+}
+
+#check:checked ~ .spcheck:before {
+	transform: translate(0px, -12px) rotate(-45deg);
+}
+
+#check:checked ~ span:after {
+	transform: translate(0px, 12px) rotate(45deg);
+}
+
+#check:checked ~ label {
+	border-radius: 50%;
+}
+
+#check:not(:checked) #menu {
+	visibility: visible;
+}
