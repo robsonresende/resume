@@ -6,14 +6,15 @@
 
 label {
 	max-width:44px;
-	max-height: 40px;
+	max-height: 38px;
 	border-radius: 3px;
 }
 
 .menuicon label {
 	width: 100%;
 	height: 100%;
-	background-color: #006699;
+	background-color: var(--green);
+	border: var(--transpwhite) 1px dotted;
 	position: absolute;
 	transition: all 0.3s linear;
 }
@@ -84,5 +85,11 @@ label {
 
 #check:checked ~ #menu {
 	visibility: visible;
+	text-align: left;
+	background-color: var(--green);
+	width: 100%;
 }
 
+#menu a {
+	padding-top: 0.75em;
+}
